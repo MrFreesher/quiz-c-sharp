@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnswerItem\AnswerItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnswerItem\AnswerItem.Designer.cs">
+      <DependentUpon>AnswerItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,24 @@
     <Compile Include="Model\Data\JsonConverter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionItem\QuestionItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuestionItem\QuestionItem.Designer.cs">
+      <DependentUpon>QuestionItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestInfoItem\TestInfoItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestInfoItem\TestInfoItem.Designer.cs">
+      <DependentUpon>TestInfoItem.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AnswerItem\AnswerItem.resx">
+      <DependentUpon>AnswerItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -70,6 +94,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuestionItem\QuestionItem.resx">
+      <DependentUpon>QuestionItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestInfoItem\TestInfoItem.resx">
+      <DependentUpon>TestInfoItem.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
