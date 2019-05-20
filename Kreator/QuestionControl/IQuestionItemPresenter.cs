@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kreator.QuestionItem {
+namespace Kreator.QuestionControl {
     interface IQuestionItemPresenter {
         void SaveQuestion();
         void ClearQuestionItem();

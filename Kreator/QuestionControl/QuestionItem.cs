@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kreator.QuestionItem {
+namespace Kreator.QuestionControl {
     public partial class QuestionItem : UserControl,IQuestionItem {
         public QuestionItem() {
             InitializeComponent();

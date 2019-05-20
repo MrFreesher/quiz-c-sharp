@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kreator.TestInfoItem {
+namespace Kreator.TestInfoControl {
     interface ITestInfoItemPresenter {
         void SaveTestInfo();
         event Action AddTestInfo;

@@ -1,4 +1,4 @@
-﻿namespace Kreator.TestInfoItem {
+﻿namespace Kreator.TestInfoControl {
     partial class TestInfoItem {
         /// <summary> 
         /// Required designer variable.

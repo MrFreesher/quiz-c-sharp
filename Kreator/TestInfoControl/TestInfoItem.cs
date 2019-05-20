@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kreator.TestInfoItem {
+namespace Kreator.TestInfoControl {
     public partial class TestInfoItem : UserControl,ITestInfoItem {
         public TestInfoItem() {
             InitializeComponent();

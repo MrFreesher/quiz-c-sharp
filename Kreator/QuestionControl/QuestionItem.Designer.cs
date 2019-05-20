@@ -1,4 +1,4 @@
-﻿namespace Kreator.QuestionItem {
+﻿namespace Kreator.QuestionControl {
     partial class QuestionItem {
         /// <summary> 
         /// Required designer variable.
