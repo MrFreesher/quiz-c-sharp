@@ -13,10 +13,10 @@ namespace Kreator
 {
     public partial class Form1 : Form,IForm
     {
-        private string scene = "Question";
+        private string scene = "TestInfo";
         public string Scene {
             get {
-                return this.Scene;
+                return this.scene;
             }
             set {
                 this.scene = value;
