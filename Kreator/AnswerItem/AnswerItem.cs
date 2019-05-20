@@ -9,9 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Kreator.AnswerItem {
-    public partial class AnswerItem : UserControl {
+    public partial class AnswerItem : UserControl,IAnswerItem {
         public AnswerItem() {
             InitializeComponent();
         }
+
+        public string AnswerContent => answerContentInput.Text;
+
+        public int Points => Convert.ToInt32(answerPointInput.Value);
     }
 }
