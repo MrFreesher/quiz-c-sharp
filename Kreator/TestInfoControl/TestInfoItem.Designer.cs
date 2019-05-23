@@ -29,7 +29,6 @@
             this.testTitleInput = new System.Windows.Forms.TextBox();
             this.testAuthorInput = new System.Windows.Forms.TextBox();
             this.testDescriptionInput = new System.Windows.Forms.TextBox();
-            this.addTestInfoBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // testTitleLabel
@@ -81,20 +80,10 @@
             this.testDescriptionInput.Size = new System.Drawing.Size(246, 37);
             this.testDescriptionInput.TabIndex = 5;
             // 
-            // addTestInfoBtn
-            // 
-            this.addTestInfoBtn.Location = new System.Drawing.Point(164, 175);
-            this.addTestInfoBtn.Name = "addTestInfoBtn";
-            this.addTestInfoBtn.Size = new System.Drawing.Size(75, 23);
-            this.addTestInfoBtn.TabIndex = 6;
-            this.addTestInfoBtn.Text = "Dodaj test";
-            this.addTestInfoBtn.UseVisualStyleBackColor = true;
-            // 
             // TestInfoItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.addTestInfoBtn);
             this.Controls.Add(this.testDescriptionInput);
             this.Controls.Add(this.testAuthorInput);
             this.Controls.Add(this.testTitleInput);
@@ -116,6 +105,5 @@
         private System.Windows.Forms.TextBox testTitleInput;
         private System.Windows.Forms.TextBox testAuthorInput;
         private System.Windows.Forms.TextBox testDescriptionInput;
-        private System.Windows.Forms.Button addTestInfoBtn;
     }
 }

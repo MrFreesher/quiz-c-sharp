@@ -4,19 +4,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kreator
-{
-    static class Program
-    {
+namespace Kreator {
+    static class Program {
         /// <summary>
         /// Główny punkt wejścia dla aplikacji.
         /// </summary>
         [STAThread]
-        static void Main()
-        {
+        static void Main() {
+            IForm view = new Form1();
+            IFormPresenter presenter = new Presenter(view);
+
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            Application.Run((Form)view);
         }
     }
 }

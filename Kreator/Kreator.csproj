@@ -71,6 +71,7 @@
     <Compile Include="Model\Data\JsonConverter.cs" />
     <Compile Include="Model\ITestModel.cs" />
     <Compile Include="Model\TestModel.cs" />
+    <Compile Include="Presenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuestionControl\IQuestionItem.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="QuestionControl\QuestionItem.Designer.cs">
       <DependentUpon>QuestionItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuestionControl\QuestionItemPresenter.cs" />
     <Compile Include="TestInfoControl\ITestInfoItem.cs" />
     <Compile Include="TestInfoControl\ITestInfoItemPresenter.cs" />
     <Compile Include="TestInfoControl\TestInfoItem.cs">
@@ -89,6 +91,7 @@
     <Compile Include="TestInfoControl\TestInfoItem.Designer.cs">
       <DependentUpon>TestInfoItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestInfoControl\TestInfoPresenter.cs" />
     <EmbeddedResource Include="AnswerControl\AnswerItem.resx">
       <DependentUpon>AnswerItem.cs</DependentUpon>
     </EmbeddedResource>

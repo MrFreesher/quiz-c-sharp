@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kreator.AnswerItem {
-    public partial class AnswerItem : UserControl,IAnswerItem {
+namespace Kreator.AnswerControl {
+    public partial class AnswerItem : UserControl, IAnswerItem {
         public AnswerItem() {
             InitializeComponent();
         }

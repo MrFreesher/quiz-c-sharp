@@ -49,6 +49,7 @@
             this.addTestInfoBtn.TabIndex = 1;
             this.addTestInfoBtn.Text = "Dodaj test";
             this.addTestInfoBtn.UseVisualStyleBackColor = true;
+            this.addTestInfoBtn.Click += AddTestInfoBtn_Click;
             // 
             // addQuestionBtn
             // 
@@ -58,6 +59,7 @@
             this.addQuestionBtn.TabIndex = 2;
             this.addQuestionBtn.Text = "Dodaj pytanie";
             this.addQuestionBtn.UseVisualStyleBackColor = true;
+            this.addQuestionBtn.Click += AddQuestionBtn_Click;
             // 
             // endTestBtn
             // 
@@ -67,6 +69,7 @@
             this.endTestBtn.TabIndex = 3;
             this.endTestBtn.Text = "Zakończ test";
             this.endTestBtn.UseVisualStyleBackColor = true;
+            this.endTestBtn.Click += EndCreatingTestBtn_Click;
             // 
             // Form1
             // 

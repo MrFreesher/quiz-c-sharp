@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kreator.TestInfoControl {
-    interface ITestInfoItem {
+namespace Kreator {
+    public interface ITestInfoItem {
         
         string Title { get; }
         string Author { get; }

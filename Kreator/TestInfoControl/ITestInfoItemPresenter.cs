@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Kreator.TestInfoControl {
     interface ITestInfoItemPresenter {
         void SaveTestInfo();
-        event Action AddTestInfo;
+        
 
     }
 }

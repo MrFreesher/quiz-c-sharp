@@ -9,5 +9,6 @@ namespace Kreator {
         void AddQuestionToTest();
         void AddTestInfo();
         void EndTest();
+        void SetupPresenter();
     }
 }

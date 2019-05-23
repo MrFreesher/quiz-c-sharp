@@ -54,6 +54,7 @@
             this.addAnswerItemBtn.TabIndex = 2;
             this.addAnswerItemBtn.Text = "Dodaj odpowiedź";
             this.addAnswerItemBtn.UseVisualStyleBackColor = true;
+            this.addAnswerItemBtn.Click += AddAnswerItem;
             // 
             // answersContainer
             // 

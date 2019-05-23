@@ -11,22 +11,34 @@ using Kreator.TestInfoControl;
 using Kreator.QuestionControl;
 namespace Kreator
 {
-    public partial class Form1 : Form,IForm
-    {
+    public partial class Form1 : Form, IForm {
+        public event Action ChangeScene;
         private string scene = "TestInfo";
+        private IQuestionItem qitem;
+        private ITestInfoItem titem;
+        
+        
+        public IQuestionItem qItem {
+            get {
+                return qitem;
+            }
+        }
+
+        public ITestInfoItem tItem => titem;
+
         public string Scene {
             get {
                 return this.scene;
             }
-            set {
-                this.scene = value;
-            }
+
         }
         public Form1()
         {
             InitializeComponent();
             HideButtons();
+            
             ChangeUserControl(Scene);
+
            
         }
 
@@ -34,27 +46,45 @@ namespace Kreator
         public event Action AddQuestion;
         public event Action EndCreatingTest;
 
-        private void AddTestInfoBtn_Click() {
+        private void AddTestInfoBtn_Click(object sender, EventArgs args) {
+            Console.WriteLine("Dodaj test info click");
+            this.scene = "Question";
             AddTestInfo?.Invoke();
+            if(AddTestInfo == null) {
+                Console.Write("a");
+            }
         }
-        private void AddQuestionBtn_Click() {
+        private void AddQuestionBtn_Click(object sender, EventArgs args) {
             AddQuestion?.Invoke();
         }
-        private void EndCreatingTestBtn_Click() {
+        private void EndCreatingTestBtn_Click(object sender, EventArgs args) {
             EndCreatingTest?.Invoke();
         }
 
         public void ChangeUserControl(string ControlName) {
+            Console.WriteLine("Zmiana sceny");
             if (ControlName.Equals("TestInfo")) {
                 ClearControls();
-                ITestInfoItem testInfoItem = new TestInfoItem();
-                controlContainer.Controls.Add((UserControl)testInfoItem);
+                titem = new TestInfoItem();
+                controlContainer.Controls.Add((UserControl) titem);
                 ShowButtons(ControlName);
-            } else if(ControlName.Equals("Question")){
-                    ClearControls();
-                    IQuestionItem questionItem = new QuestionItem();
-                    controlContainer.Controls.Add((UserControl)questionItem);
-                    ShowButtons(ControlName);
+                if(ChangeScene != null) {
+                    Console.WriteLine("nie null");
+                } else {
+                    Console.WriteLine("To jest null");
+                }
+                ChangeScene?.Invoke();
+                Console.WriteLine("Zmiana sceny na test info");
+               
+            } else if (ControlName.Equals("Question")) {
+                ClearControls();
+                qitem = new QuestionItem();
+                controlContainer.Controls.Add((UserControl)qitem);
+                ShowButtons(ControlName);
+               
+                
+               ChangeScene?.Invoke();
+                
             }
             
             
@@ -78,14 +108,12 @@ namespace Kreator
             }
         }
 
-        private void endTestBtn_Click() {
-            EndCreatingTest?.Invoke();
+       
+
+        public void ShowSaveTestMessage() {
+            MessageBox.Show("Test został zapisany do pliku JSON", "Kreator", MessageBoxButtons.OK);
         }
-        private void addTestInfoBtn_Click() {
-            AddTestInfo?.Invoke();
-        }
-        private void addQuestionBtn_Click() {
-            AddQuestion?.Invoke();
-        }
+
+        
     }
 }

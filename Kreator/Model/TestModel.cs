@@ -4,13 +4,13 @@ using JednokrotnyWybor;
 namespace Kreator.Model {
     class TestModel : ITestModel {
 
-        private TestModel instance = null;
-        public TestModel Instance { get {
+        private static TestModel instance = null;
+        public static TestModel Instance { get {
                 if (instance != null) {
-                    return this.Instance;
+                    return instance;
                 } else {
                     instance = new TestModel();
-                    return this.instance;
+                    return instance;
                 }
             }
 
@@ -19,7 +19,7 @@ namespace Kreator.Model {
         public Test TestItem { get { return test; } } 
 
         public string NormaliseFileName() {
-            return TestItem.Title.ToLower().Trim();
+            return TestItem.Title;
         }
 
         public void SaveTestToJson() {
