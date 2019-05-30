@@ -19,7 +19,7 @@ namespace Kreator.Model {
         public Test TestItem { get { return test; } } 
 
         public string NormaliseFileName() {
-            return TestItem.Title;
+            return TestItem.Title.ToLower().Replace(" ","");
         }
 
         public void SaveTestToJson() {
