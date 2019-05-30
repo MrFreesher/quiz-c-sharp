@@ -8,5 +8,6 @@ namespace Kreator.QuestionControl {
     interface IQuestionItemPresenter {
         void SaveQuestion();
         void ClearQuestionItem();
+        bool validateData();
     }
 }

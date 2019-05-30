@@ -12,13 +12,21 @@ namespace Kreator.TestInfoControl {
             this.view = testInfo;
             this.model = TestModel.Instance;
         }
-
+        
         public void SaveTestInfo() {
             this.model.TestItem.Author = this.view.Author;
             this.model.TestItem.Description = this.view.Description;
             this.model.TestItem.Title = this.view.Title;
             Console.WriteLine(this.view.Title);
             Console.WriteLine(this.model.TestItem.Title);
+        }
+
+        public bool validateData() {
+            if(!view.Author.Equals("") && !view.Description.Equals("") && !view.Title.Equals("")) {
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 }

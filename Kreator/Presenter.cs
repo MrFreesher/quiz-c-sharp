@@ -27,14 +27,20 @@ namespace Kreator {
 
         }
         public void AddQuestionToTest() {
-            this.questionItemPresenter.SaveQuestion();
+            if (this.questionItemPresenter.validateData()) {
+                this.questionItemPresenter.SaveQuestion();
+            }
         }
         
         public void AddTestInfo() {
             Console.WriteLine("zapis");
-            testItemPresenter.SaveTestInfo();
-           
-            this.view.ChangeUserControl("Question");
+            if (testItemPresenter.validateData()) {
+                testItemPresenter.SaveTestInfo();
+
+                this.view.ChangeUserControl("Question");
+            } else {
+                MessageBox.Show("Wypełnij wszystkie pola");
+            }
         }
 
         public void EndTest() {

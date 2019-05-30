@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Kreator.TestInfoControl {
-    interface ITestInfoItemPresenter {
+    public interface ITestInfoItemPresenter {
         void SaveTestInfo();
-        
+        bool validateData();
 
     }
 }

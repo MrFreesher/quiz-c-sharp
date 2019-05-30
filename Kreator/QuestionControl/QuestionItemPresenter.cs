@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,24 @@ namespace Kreator.QuestionControl {
             ClearQuestionItem();
 
 
+        }
+        
+        public bool validateData() {
+
+            if (!view.Content.Equals("")) {
+                foreach(var item in this.view.Answers) {
+                    if(item.AnswerContent.Equals("") && item.Points == 0) {
+                        MessageBox.Show("Uzupełnij wszystkie pola odpowiedzi");
+                        return false;
+                    }
+                   
+                }
+                return true;
+
+            } else {
+                MessageBox.Show("Uzupełnij treść pytania");
+                return false;
+            }
         }
     }
 }
