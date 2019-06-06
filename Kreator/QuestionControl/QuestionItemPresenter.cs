@@ -8,7 +8,7 @@ using Kreator.Model;
 namespace Kreator.QuestionControl {
     class QuestionItemPresenter : IPresenter, IQuestionItemPresenter {
         IQuestionItem view;
-        TestModel model;
+        readonly TestModel model;
         public QuestionItemPresenter(IQuestionItem control) {
             this.view = control;
             this.model = TestModel.Instance;
@@ -19,17 +19,18 @@ namespace Kreator.QuestionControl {
         }
 
         public void SaveQuestion() {
-            Question q = new Question();
-            q.Content = this.view.Content;
+            Question question = new Question {
+                Content = this.view.Content
+            };
             foreach (var item in this.view.Answers) {
                 Answer answer = new Answer {
                     Content = item.AnswerContent,
                     Points = item.Points
                 };
-                q.Answers.Add(answer);
+                question.Answers.Add(answer);
             }
 
-            this.model.TestItem.Questions.Add(q);
+            this.model.TestItem.Questions.Add(question);
 
             ClearQuestionItem();
 

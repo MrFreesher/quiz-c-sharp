@@ -9,10 +9,10 @@ using Kreator.Model;
 using Kreator.QuestionControl;
 namespace Kreator {
     class Presenter : IFormPresenter {
-        private IForm view;
+        private readonly IForm view;
         private ITestInfoItemPresenter testItemPresenter;
         private IQuestionItemPresenter questionItemPresenter;
-        private TestModel model;
+        private readonly TestModel model;
         public Presenter(IForm view) {
             this.view = view;
             this.model = TestModel.Instance;
